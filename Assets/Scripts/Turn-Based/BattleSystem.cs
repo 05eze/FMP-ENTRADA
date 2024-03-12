@@ -33,6 +33,12 @@ public class BattleSystem : MonoBehaviour
         StartCoroutine(SetupBattle());
     }
 
+
+
+
+
+
+
     IEnumerator SetupBattle()
     {
         GameObject playerGO = Instantiate(playerPrefab, playerBattleStation);
@@ -54,19 +60,118 @@ public class BattleSystem : MonoBehaviour
     }
    
 
+
+
+
+
+
+
     IEnumerator PlayerAttack()
     {
         //Damage the enemy + wait for a few seconds
+        bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
+
+        enemyHUD.SetHP(enemyUnit.currentHP);
+        dialogueText.text = "The attack is successful!";
+
+
         yield return new WaitForSeconds(2f);
 
         //Check if the enemy is dead
+
+        if (isDead)
+        {
+            //End Battle, change state to WON
+            state = BattleState.WON;
+            EndBattle();
+        }
+        else
+        {
+            //Enemy's turn, change state to ENEMYTURN
+            state = BattleState.ENEMYTURN;
+            StartCoroutine(EnemyTurn());
+        }
         //Change state based on what happened 
     }
+
+    IEnumerator PlayerHeal()
+    {
+        playerUnit.Heal(5);
+
+        playerHUD.SetHP(playerUnit.currentHP);
+        dialogueText.text = "You feel renewed strength!";
+
+        yield return new WaitForSeconds(2f);
+
+        state = BattleState.ENEMYTURN;
+        StartCoroutine (EnemyTurn());
+    }
+
+
+
+
+    IEnumerator EnemyTurn()
+    {
+        dialogueText.text = enemyUnit.unitName + " attacks!";
+
+        yield return new WaitForSeconds(1f);
+
+        bool isDead = playerUnit.TakeDamage(enemyUnit.damage);
+
+        playerHUD.SetHP(playerUnit.currentHP);
+
+        yield return new WaitForSeconds(1f);
+
+        if (isDead)
+        {
+            state = BattleState.LOST;
+            EndBattle();
+        }
+        else
+        {
+            state = BattleState.PLAYERTURN;
+            PlayerTurn();
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+    //Change to IEnumerator + yield return new WaitForSeconds after you add a transition 
+    void EndBattle()
+    {
+        if(state == BattleState.WON)
+        {
+            dialogueText.text = "You won the battle!";
+            //Scene Management? Reload Scene? 
+        }
+        else if (state == BattleState.LOST)
+        {
+            dialogueText.text = "You lost...";
+            //Scene Management? Reload Scene? 
+        }
+    }
+
+
+
+
+
     //The PLAYER's Turn
     void PlayerTurn()
     {
         dialogueText.text = "Choose an action:";
     }
+
+
+
+
+
 
     public void OnAttackButton()
     {
@@ -75,6 +180,17 @@ public class BattleSystem : MonoBehaviour
             return;
 
         StartCoroutine(PlayerAttack());
+
+    }
+    
+    
+    public void OnHealButton()
+    {
+        //Check if it is the PLAYER's turn
+        if (state != BattleState.PLAYERTURN)
+            return;
+
+        StartCoroutine(PlayerHeal());
 
     }
 }

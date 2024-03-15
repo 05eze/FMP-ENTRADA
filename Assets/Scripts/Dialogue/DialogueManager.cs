@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Text = TMPro.TextMeshProUGUI;
 using UnityEngine.UI;
+using UnityEditor.Presets;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -10,16 +11,29 @@ public class DialogueManager : MonoBehaviour
     public Text nameText;
     public Text dialogueText;
 
+    public Animator animator_dialogue;
+    public Animator animator_cam;
+
     private Queue<string> sentences;
 
     private void Start()
     {
         sentences = new Queue<string>();  
+        Cursor.lockState = CursorLockMode.Locked;
 
     }
 
     public void StartDialogue (Dialogue dialogue)
     {
+        FindAnyObjectByType<DialogueTrigger>().PressE.SetActive(false);
+
+
+        Cursor.lockState = CursorLockMode.None;
+
+        animator_dialogue.SetBool("IsOpen", true);
+        animator_cam.SetBool("IsOpen", true);
+
+
         //Debug.Log("Starting conversation with " + dialogue.name);
 
         nameText.text = dialogue.name;
@@ -45,12 +59,33 @@ public class DialogueManager : MonoBehaviour
         }
 
         string sentence = sentences.Dequeue();
-        dialogueText.text = sentence;   
+        StopAllCoroutines();
+        StartCoroutine(TypeSentence(sentence));   
+
     }
 
-    void EndDialogue()
+
+    IEnumerator TypeSentence (string sentence)
     {
+        dialogueText.text = "";
+        foreach (char letter in sentence.ToCharArray())
+        {
+            dialogueText.text += letter;
+            yield return null;
+        }
+    }
+
+
+
+    public void EndDialogue()
+    {
+        //FindAnyObjectByType<DialogueTrigger>().PressE.SetActive(true);
         Debug.Log("End of conversation.");
+
+        animator_dialogue.SetBool("IsOpen", false);
+        animator_cam.SetBool("IsOpen", false);
+
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Text = TMPro.TextMeshProUGUI;
 using UnityEngine.SceneManagement;
 
 
@@ -41,7 +42,7 @@ public class GameManager : MonoBehaviour
     {
         instance = this;
 
-		Cursor.lockState = CursorLockMode.Locked;
+		//Cursor.lockState = CursorLockMode.Locked;
 
 		scoreText.text = " ";
 		totalNotes = FindObjectsOfType<NoteObject>().Length;

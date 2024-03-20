@@ -7,7 +7,7 @@ public class NoteObject : MonoBehaviour
 
     public bool canBePressed;
 
-    public KeyCode keyToPress;
+    public KeyCode keyToPress, keyToPress2;
 
     public GameObject okEffect, goodEffect, perfectEffect, missEffect;
 

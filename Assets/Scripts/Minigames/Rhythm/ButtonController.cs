@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ButtonController : MonoBehaviour
 {
@@ -23,6 +24,8 @@ public class ButtonController : MonoBehaviour
         if (Input.GetKeyDown(keyToPress) /*|| Input.GetKeyDown(keyToPress2)*/)
         {
             theSR.sprite = pressedImage;
+
+            Debug.Log("Button pressed");
         }
 
         if (Input.GetKeyUp(keyToPress))

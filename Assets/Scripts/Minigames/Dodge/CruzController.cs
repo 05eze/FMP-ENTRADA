@@ -17,7 +17,7 @@ public class CruzController : MonoBehaviour
     void Update()
     {
         rb.velocity = Vector3.right * 10f;
-        rb.velocity = Vector3.down * 5f;
+        //rb.velocity = Vector3.down * 5f;
 
         if (Input.GetKeyDown(KeyCode.Space))
         {

@@ -6,20 +6,16 @@ public class GameOverTrig : MonoBehaviour
 {
 
     public GameObject gameOver;
-
-
-
-
-
     private void Start()
     {
         gameOver.SetActive(false);
     }
-    void OnColliderEnter (Collider other)
+    void OnCollisionEnter (Collision other)
     {
-        if(tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
             Debug.Log("GameOver");
+            Time.timeScale = 0f;
             gameOver.SetActive(true);
         }
     }

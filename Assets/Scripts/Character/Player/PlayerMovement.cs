@@ -45,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
+        Time.timeScale = 1.0f;
     }
 
     private void FixedUpdate()

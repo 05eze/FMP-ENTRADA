@@ -8,6 +8,7 @@ public class DelayCountdownScript : MonoBehaviour
 
     private void Start()
     {
+        countDown.SetActive(true);
         StartCoroutine("StartDelay");
     }
 

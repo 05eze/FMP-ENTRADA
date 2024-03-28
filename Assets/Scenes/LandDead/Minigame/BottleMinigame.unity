@@ -1201,7 +1201,7 @@ MonoBehaviour:
   spawnee: {fileID: 4629110899012853591, guid: 0a5c1f35d84e7504a9cf76454e59ff6b, type: 3}
   stopSpawning: 0
   spawnTime: 0
-  spawnDelay: 1
+  spawnDelay: 5
 --- !u!1 &552783323
 GameObject:
   m_ObjectHideFlags: 0
@@ -1400,7 +1400,7 @@ MonoBehaviour:
   spawnee: {fileID: 4629110899012853591, guid: 0a5c1f35d84e7504a9cf76454e59ff6b, type: 3}
   stopSpawning: 0
   spawnTime: 0
-  spawnDelay: 1
+  spawnDelay: 5
 --- !u!1 &858957700
 GameObject:
   m_ObjectHideFlags: 0
@@ -2856,7 +2856,7 @@ MonoBehaviour:
   spawnee: {fileID: 4629110899012853591, guid: 0a5c1f35d84e7504a9cf76454e59ff6b, type: 3}
   stopSpawning: 0
   spawnTime: 0
-  spawnDelay: 1
+  spawnDelay: 5
 --- !u!1 &1961740198
 GameObject:
   m_ObjectHideFlags: 0

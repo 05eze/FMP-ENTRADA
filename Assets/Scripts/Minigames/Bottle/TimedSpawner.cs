@@ -23,7 +23,8 @@ public class TimedSpawner : MonoBehaviour
             CancelInvoke("SpawnObejct");
         }
         
-       /* Instantiate(spawnee2, transform.position, transform.rotation);
+       /*
+        Instantiate(spawnee2, transform.position, transform.rotation);
         if(stopSpawning)
         {
             CancelInvoke("SpawnObejct");

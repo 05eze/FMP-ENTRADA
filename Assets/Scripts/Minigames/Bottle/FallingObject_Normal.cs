@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class FallingObject_Normal : MonoBehaviour
 {
+    [SerializeField] private float velocity = 3f;
     Rigidbody rb;
 
-    // Start is called before the first frame update
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
+ 
     void Update()
     {
-        
+        rb.velocity = Vector3.down * velocity;
     }
 }

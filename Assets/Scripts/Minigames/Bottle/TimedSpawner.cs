@@ -5,7 +5,7 @@ using UnityEngine;
 public class TimedSpawner : MonoBehaviour
 {
     public GameObject spawnee;
-    public GameObject spawnee2;
+    //public GameObject spawnee2;
     public bool stopSpawning = false;
     public float spawnTime;
     public float spawnDelay;
@@ -23,11 +23,11 @@ public class TimedSpawner : MonoBehaviour
             CancelInvoke("SpawnObejct");
         }
         
-        Instantiate(spawnee2, transform.position, transform.rotation);
+       /* Instantiate(spawnee2, transform.position, transform.rotation);
         if(stopSpawning)
         {
             CancelInvoke("SpawnObejct");
         }
-
+       */
     }
 }

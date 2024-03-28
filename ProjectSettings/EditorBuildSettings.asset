@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/LandDead/Battle_1.unity
     guid: 881e8dac785f302459d705f2974a9102
   - enabled: 1
-    path: Assets/Scenes/LandDead/DodgeMinigame.unity
+    path: Assets/Scenes/LandDead/Minigame/DodgeMinigame.unity
     guid: b368a937e20183648bd15c8b2a2fc631
   m_configObjects: {}

@@ -16,7 +16,7 @@ public class VidelController : MonoBehaviour
 
     public Transform orientation;
 
-    //float horizontalInput;
+    float horizontalInput;
     float verticalInput;
 
     Vector3 moveDirection;
@@ -53,7 +53,7 @@ public class VidelController : MonoBehaviour
 
     private void MyInput()
     {
-        //horizontalInput = Input.GetAxisRaw("Horizontal");
+        horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
     }
 
@@ -61,6 +61,7 @@ public class VidelController : MonoBehaviour
     {
         //calculate movement direction
         moveDirection = orientation.forward * verticalInput;
+        moveDirection = orientation.right * -horizontalInput;
 
         //add force to player model
         rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);

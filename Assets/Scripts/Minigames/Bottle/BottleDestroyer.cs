@@ -19,6 +19,7 @@ public class BottleDestroyer : MonoBehaviour
         {
             Debug.Log("-1 life");
             Destroy(gameObject);
+            LivesCounter.health -= 1;
         }
     }
 

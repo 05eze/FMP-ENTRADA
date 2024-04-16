@@ -6,16 +6,19 @@ public class BottleDestroyer : MonoBehaviour
 {
     
     
-    void OnTriggerEnter(Collider other)
+    void OnCollisionEnter(Collision collision)
     {
         //Box Collector 
-        if (gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")
         {
+            Debug.Log("Collected bottle");
             Destroy(gameObject);
         }
         //GroundDetector
+        if (collision.gameObject.tag == "Ground")
         {
-
+            Debug.Log("-1 life");
+            Destroy(gameObject);
         }
     }
 

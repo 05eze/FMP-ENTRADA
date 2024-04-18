@@ -12,6 +12,7 @@ public class MainMenuFlow : MonoBehaviour
     public GameObject beginGame, beginGameText;
     public GameObject buttons;
     public GameObject logo;
+    public GameObject transition;
 
 
     //public GameObject optionsMenu;
@@ -19,13 +20,18 @@ public class MainMenuFlow : MonoBehaviour
 
     private void Start()
     {
+        buttons.SetActive(false);
+        transition.SetActive(false);
         StartCoroutine("StartDelay");
     }
 
     IEnumerator StartDelay()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        beginGameText.SetActive(false);
         yield return new WaitForSeconds(4);
+        Cursor.lockState = CursorLockMode.None;
+        beginGameText.SetActive(true);
 
     }
 
@@ -38,10 +44,19 @@ public class MainMenuFlow : MonoBehaviour
         logo.gameObject.SetActive(false);
     }
 
-    public void BeginGame()
+    /*IEnumerator*/ public void BeginGame()
+    {
+
+        transition.SetActive(true);
+        //yield return new WaitForSeconds(2);
+        //SceneManager.LoadScene("LandOfLiving");
+        //yield return null;
+    
+    }
+
+    public void Transition()
     {
         SceneManager.LoadScene("LandOfLiving");
-    
     }
 
     public void OptionMenu()

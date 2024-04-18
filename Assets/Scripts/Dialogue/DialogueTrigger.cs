@@ -17,9 +17,9 @@ public class DialogueTrigger : MonoBehaviour
     {
         PressE.SetActive(true);
 
-        if (Input.GetKeyDown(KeyCode.E) && gameObject.tag == "Player" && PressE.activeInHierarchy)
+        if (Input.GetKeyDown(KeyCode.E) /*&& gameObject.tag == "Player"*/)
         {
-            Debug.Log("key pressed STYYYYLLL");
+            Debug.Log("Key Pressed");
             TriggerDialogue();
         }
     }
@@ -31,15 +31,6 @@ public class DialogueTrigger : MonoBehaviour
         DisableDialogue();
     }
 
-
-
-
-
-    /*private void Input.GetKeyDown(KeyCode.E)
-    {
-        TriggerDialogue()
-    }
-    */
     public void TriggerDialogue()
     {
         FindAnyObjectByType<DialogueManager>().StartDialogue(dialogue);

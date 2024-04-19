@@ -73,10 +73,10 @@ public class BattleSystem : MonoBehaviour
 
         enemyHUD.SetHP(enemyUnit.currentHP);
         dialogueText.text = "The attack is successful!";
-
+        Cursor.lockState = CursorLockMode.Locked;
 
         yield return new WaitForSeconds(2f);
-
+        Cursor.lockState = CursorLockMode.None;
         //Check if the enemy is dead
 
         if (isDead)
@@ -96,6 +96,7 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator PlayerHeal()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         playerUnit.Heal(5);
 
         playerHUD.SetHP(playerUnit.currentHP);
@@ -112,6 +113,9 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator EnemyTurn()
     {
+
+        Cursor.lockState = CursorLockMode.Locked;
+
         dialogueText.text = enemyUnit.unitName + " attacks!";
 
         yield return new WaitForSeconds(1f);
@@ -121,6 +125,7 @@ public class BattleSystem : MonoBehaviour
         playerHUD.SetHP(playerUnit.currentHP);
 
         yield return new WaitForSeconds(1f);
+        Cursor.lockState = CursorLockMode.None;
 
         if (isDead)
         {

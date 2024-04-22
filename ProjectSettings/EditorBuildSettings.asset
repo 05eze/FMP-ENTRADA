@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 2b59badb45a6a0544ba5249998c21bed
   - enabled: 1
-    path: Assets/Scenes/LandLiving/LandOfLiving.unity
+    path: Assets/Scenes/Opening/LandOfLiving.unity
     guid: d1417eeda369fc940a4fe3c9d8cb9599
   - enabled: 1
     path: Assets/Scenes/LandDead/LandOfDead.unity

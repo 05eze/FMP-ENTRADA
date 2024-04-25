@@ -10,11 +10,11 @@ public class SetActiveScript : MonoBehaviour
     
     private void Start()
     {
-        GameObject.SetActive(false);
+        GameObject.gameObject.SetActive(false);
     }
     private void OnTriggerEnter(Collider other)
     {
-        GameObject.SetActive(true);
+        GameObject.gameObject.SetActive(true);
        
     }
 

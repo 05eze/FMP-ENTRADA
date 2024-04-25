@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/LandDead/LandOfDead.unity
     guid: 34529863f74f6c74d90388a92b6a18f9
   - enabled: 1
+    path: Assets/Scenes/Prologue.unity
+    guid: ce01ca489502bf94e8c77dc4d3a64db8
+  - enabled: 1
     path: Assets/Scenes/LandDead/Battle_1.unity
     guid: 881e8dac785f302459d705f2974a9102
   - enabled: 1

@@ -11,13 +11,18 @@ public class DialogueTrigger : MonoBehaviour
     {
         gameObject.tag = "Player";
         PressE.SetActive(false);
+
+        /*if(other.gameObject.tag == "Player")
+        {
+            TriggerDialogue();
+        }*/
     }
 
     private void OnTriggerStay(Collider other)
     {
         PressE.SetActive(true);
 
-        if (Input.GetKeyDown(KeyCode.E) /*&& gameObject.tag == "Player"*/)
+        if (Input.GetKeyDown(KeyCode.E) /*&& other.gameObject.tag == "Player"*/)
         {
             Debug.Log("Key Pressed");
             TriggerDialogue();

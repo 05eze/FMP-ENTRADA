@@ -56,7 +56,7 @@ public class MainMenuFlow : MonoBehaviour
 
     public void Transition()
     {
-        SceneManager.LoadScene("LandOfLiving");
+        SceneManager.LoadScene("Prologue");
     }
 
     public void OptionMenu()

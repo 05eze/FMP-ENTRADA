@@ -5,6 +5,7 @@ using UnityEngine;
 public class ActivityTrigger : MonoBehaviour
 {
     public Animator animator_cam;
+    public Animator BattleAndMinigameCam;
     public GameObject battleAndMinigameUI;
 
     private void Start()
@@ -15,6 +16,7 @@ public class ActivityTrigger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         animator_cam.SetBool("IsOpen", true);
+        BattleAndMinigameCam.SetBool("IsOpen", true);
         battleAndMinigameUI.SetActive(true);
 
         Cursor.lockState = CursorLockMode.None;
@@ -24,6 +26,7 @@ public class ActivityTrigger : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         animator_cam.SetBool("IsOpen", false);
+        BattleAndMinigameCam.SetBool("IsOpen", false);
         battleAndMinigameUI.SetActive(false);
 
         Cursor.lockState = CursorLockMode.Locked;

@@ -12,6 +12,8 @@ public class BattleSystem : MonoBehaviour
     public GameObject playerPrefab;
     public GameObject enemyPrefab;
 
+    public GameObject BackToGameButton;
+
 
     public Transform playerBattleStation;
     public Transform enemyBattleStation;
@@ -31,6 +33,8 @@ public class BattleSystem : MonoBehaviour
     {
         state = BattleState.START;
         StartCoroutine(SetupBattle());
+
+        BackToGameButton.SetActive(false);
     }
 
 
@@ -161,6 +165,8 @@ public class BattleSystem : MonoBehaviour
             dialogueText.text = "You lost...";
             //Scene Management? Reload Scene? 
         }
+
+        BackToGameButton.gameObject.SetActive(true);
     }
 
 

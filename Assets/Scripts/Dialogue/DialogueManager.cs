@@ -28,7 +28,7 @@ public class DialogueManager : MonoBehaviour
         FindAnyObjectByType<PlayerMovement>().enabled = false;
 
 
-        FindAnyObjectByType<DialogueTrigger>().PressE.SetActive(false);
+        //FindAnyObjectByType<DialogueTrigger>().PressE.SetActive(false); && 
 
 
         Cursor.lockState = CursorLockMode.None;

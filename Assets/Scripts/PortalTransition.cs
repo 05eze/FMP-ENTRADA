@@ -8,22 +8,11 @@ public class PortalTransition : MonoBehaviour
 {
     public GameObject Transition;
 
-    private void OnTriggerEnter(Collider other)
+    private IEnumerator OnTriggerEnter(Collider other)
     {
         Transition.SetActive(true);
-        TriggerTransition();
-    }
-
-
-
-    IEnumerator TriggerTransition()
-    {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1);
         SceneManager.LoadScene("LandOfDead");
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    } 
+   
 }

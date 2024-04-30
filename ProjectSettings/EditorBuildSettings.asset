@@ -6,30 +6,30 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/Scenes/Sequence 1/MainMenu.unity
     guid: 2b59badb45a6a0544ba5249998c21bed
   - enabled: 1
-    path: Assets/Scenes/Opening/LandOfLiving.unity
+    path: Assets/Scenes/Sequence 2/LandOfLiving.unity
     guid: d1417eeda369fc940a4fe3c9d8cb9599
   - enabled: 1
-    path: Assets/Scenes/LandDead/LandOfDead.unity
+    path: Assets/Scenes/Sequence 3/LandDead/LandOfDead.unity
     guid: 34529863f74f6c74d90388a92b6a18f9
   - enabled: 1
-    path: Assets/Scenes/Opening/2LandOfLiving.unity
+    path: Assets/Scenes/Sequence 2/2LandOfLiving.unity
     guid: 8a647f8fa7145ab4d92da016df565725
   - enabled: 1
-    path: Assets/Scenes/Prologue.unity
+    path: Assets/Scenes/Sequence 1/Prologue.unity
     guid: ce01ca489502bf94e8c77dc4d3a64db8
   - enabled: 1
-    path: Assets/Scenes/LandDead/Battle_1.unity
+    path: Assets/Scenes/Sequence 3/LandDead/Battle_1.unity
     guid: 881e8dac785f302459d705f2974a9102
   - enabled: 1
-    path: Assets/Scenes/LandDead/Minigame/DodgeMinigame.unity
+    path: Assets/Scenes/Sequence 3/LandDead/Minigame/DodgeMinigame.unity
     guid: b368a937e20183648bd15c8b2a2fc631
   - enabled: 1
-    path: Assets/Scenes/LandDead/Minigame/BottleMinigame.unity
+    path: Assets/Scenes/Sequence 3/LandDead/Minigame/BottleMinigame.unity
     guid: c7be12d5c5f315d4691950271316fd61
   - enabled: 1
-    path: Assets/Scenes/LandDead/Minigame/MusicaMinigame.unity
+    path: Assets/Scenes/Sequence 3/LandDead/Minigame/MusicaMinigame.unity
     guid: 1ec93bef51cc5804eae02894f1074067
   m_configObjects: {}

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657952, g: 0.49641275, b: 0.574818, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641192, b: 0.574818, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4349,7 +4349,6 @@ GameObject:
   - component: {fileID: 591825689}
   - component: {fileID: 591825688}
   - component: {fileID: 591825691}
-  - component: {fileID: 591825692}
   - component: {fileID: 591825693}
   m_Layer: 0
   m_Name: Main Camera
@@ -4446,27 +4445,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 42989024}
   smoothTime: 0.25
---- !u!95 &591825692
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 591825687}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b03757cb43a069641a48678697f9f0c7, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &591825693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5802,7 +5780,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd34804cee9cc1245a48ec510ef74c8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator_cam: {fileID: 591825692}
+  animator_cam: {fileID: 0}
   BattleAndMinigameCam: {fileID: 514303535}
   battleAndMinigameUI: {fileID: 0}
 --- !u!114 &751401520
@@ -22604,7 +22582,7 @@ MonoBehaviour:
   nameText: {fileID: 611422797}
   dialogueText: {fileID: 1279543222}
   animator_dialogue: {fileID: 1274419117}
-  animator_cam: {fileID: 591825692}
+  animator_cam: {fileID: 0}
 --- !u!4 &1973258879
 Transform:
   m_ObjectHideFlags: 0

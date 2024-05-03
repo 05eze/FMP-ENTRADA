@@ -12,9 +12,9 @@ public class Deactivate : MonoBehaviour
    
     private void OnTriggerEnter(Collider other)
     {
-        ToDelete.SetActive(false);
-        ToDelete2.SetActive(false);
-        ToDelete3.SetActive(false);
+        ToDelete.gameObject.SetActive(false);
+        ToDelete2.gameObject.SetActive(false);
+        ToDelete3.gameObject.SetActive(false);
         
     }
 }

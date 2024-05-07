@@ -20,11 +20,13 @@ public class PlayerMovement : MonoBehaviour
 
     float horizontalInput;
     float verticalInput;
-    float turnSpeed = 10;
+    
 
     Vector3 moveDirection;
 
     Rigidbody rb;
+
+    public Animator animator;
 
     private void Update()
     {
@@ -40,10 +42,18 @@ public class PlayerMovement : MonoBehaviour
             rb.drag = groundDrag;
         else
             rb.drag = 0;
+
+        if (Input.GetKey("w"))
+        {
+            animator.SetBool("isRunning", true);
+        }
     }
 
     private void Start()
     {
+        animator = GetComponent<Animator>();
+
+
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
         Time.timeScale = 1.0f;

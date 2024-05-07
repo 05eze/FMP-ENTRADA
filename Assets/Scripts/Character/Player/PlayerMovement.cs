@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
 
     float horizontalInput;
     float verticalInput;
+    float turnSpeed = 10;
 
     Vector3 moveDirection;
 
@@ -66,6 +67,8 @@ public class PlayerMovement : MonoBehaviour
 
         //add force to player model
         rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
+
+        //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(moveDirection), 0.15f);
     }
 
     private void SpeedControl()

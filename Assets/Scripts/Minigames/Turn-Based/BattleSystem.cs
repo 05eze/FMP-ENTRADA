@@ -28,6 +28,8 @@ public class BattleSystem : MonoBehaviour
     
     public BattleState state;
 
+    public Animator playerAnimator1;
+    //public Animator enemyAnimator1;
 
     void Start()
     {
@@ -72,6 +74,7 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator PlayerAttack()
     {
+        playerAnimator1.SetBool("BasicAttack", true);
         //Damage the enemy + wait for a few seconds
         bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
 

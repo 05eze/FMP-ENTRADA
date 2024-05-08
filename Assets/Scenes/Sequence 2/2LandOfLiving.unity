@@ -805,11 +805,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 42989024}
-  - component: {fileID: 42989027}
-  - component: {fileID: 42989026}
-  - component: {fileID: 42989025}
-  - component: {fileID: 42989029}
-  - component: {fileID: 42989030}
   m_Layer: 6
   m_Name: PlayerVIDEL
   m_TagString: Player
@@ -834,127 +829,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &42989025
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 42989023}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.7488849
-  m_Height: 4.2599564
-  m_Direction: 1
-  m_Center: {x: -0.05672455, y: 1.1299782, z: 0}
---- !u!23 &42989026
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 42989023}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 473a6e8d7ca53d24bad596ca8d582430, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &42989027
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 42989023}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &42989029
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 42989023}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!95 &42989030
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 42989023}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ad4fa9860847879408ed8d7859d224eb, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &60519999
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2079,7 +1953,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50eabefd9d3711645ac7d62e1756e3e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 3144326431695840512, guid: 298a1be0a5e4fae45a89c01637cea4fb, type: 3}
+  playerPrefab: {fileID: 2022307429}
   enemyPrefab: {fileID: 1442701011329453776, guid: 24f4191c05fc92144b4049744ec87d6b, type: 3}
   BackToGameButton: {fileID: 620954129}
   playerBattleStation: {fileID: 893233397}
@@ -2088,6 +1962,7 @@ MonoBehaviour:
   playerHUD: {fileID: 365109028}
   enemyHUD: {fileID: 2088284019}
   state: 0
+  playerAnimator1: {fileID: 1375178632}
 --- !u!4 &225046847
 Transform:
   m_ObjectHideFlags: 0
@@ -4776,7 +4651,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7798db324bd874541b730b43d889923a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 42989024}
+  target: {fileID: 2022307430}
   smoothTime: 0.25
 --- !u!114 &591825693
 MonoBehaviour:
@@ -6268,7 +6143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator_cam: {fileID: 591825694}
   BattleAndMinigameCam: {fileID: 514303535}
-  battleAndMinigameUI: {fileID: 0}
+  battleAndMinigameUI: {fileID: 6785478}
 --- !u!114 &751401520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15425,6 +15300,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa5b06408e74ed347a891e43863a58f9, type: 3}
+--- !u!95 &1375178632 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4673025555488439067, guid: 298a1be0a5e4fae45a89c01637cea4fb, type: 3}
+  m_PrefabInstance: {fileID: 1491937585}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1393528278
 GameObject:
   m_ObjectHideFlags: 0
@@ -16243,7 +16123,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 93206c65b2ebe0c4787dd026b4d78fd0, type: 3}
       propertyPath: m_Name
-      value: Breathing Idle
+      value: Videl
       objectReference: {fileID: 0}
     - target: {fileID: 1034782576524563345, guid: 93206c65b2ebe0c4787dd026b4d78fd0, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -25293,7 +25173,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   orientation: {fileID: 42989024}
-  animator: {fileID: 42989030}
+  animator: {fileID: 0}
 --- !u!54 &2022307433
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -43,10 +43,29 @@ public class PlayerMovement : MonoBehaviour
         else
             rb.drag = 0;
 
+
+
+
+
+        animator.SetFloat("Speed", moveDirection.magnitude);
+
+
         if (Input.GetKey("w"))
         {
-            animator.SetBool("isRunning", true);
+           
+            transform.rotation = Quaternion.Euler(0, 0, 0);
         }
+
+
+   
+
+
+        if (!Input.GetKey("w"))
+        {
+         
+        }
+
+      
     }
 
     private void Start()

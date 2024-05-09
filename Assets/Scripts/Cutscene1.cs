@@ -10,7 +10,7 @@ public class Cutscene1 : MonoBehaviour
     public GameObject CutsceneCam;
 
     public Animator animator_cam;
-    private bool IsOpen;
+    
 
     // Start is called before the first frame update
 
@@ -28,25 +28,23 @@ public class Cutscene1 : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        PlayAnimation();
        
+    }
+
+    IEnumerator PlayAnimation()
+    {
         animator_cam.SetBool("IsOpen", true);
-        IsOpen = true;
+        yield return new WaitForSeconds(1);
     }
 
 
-    private void Update()
+    /*private void Update()
     {
-       // if (animator_cam != null)
-      //  {
             animator_cam.SetBool("IsOpen", false);
             MainCam.SetActive(true);
             CutsceneCam.SetActive(false);
-     //  }
-
-     
-       
-        
-    }
+    }*/
 
    
 

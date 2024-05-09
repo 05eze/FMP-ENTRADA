@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class AutoDialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
+    public PlayerMovement playerMovement;
 
     private void Start()
     {
@@ -33,6 +35,7 @@ public class AutoDialogueTrigger : MonoBehaviour
     public void TriggerDialogue()
     {
         FindAnyObjectByType<DialogueManager>().StartDialogue(dialogue);
+        FindAnyObjectByType<PlayerMovement>().StopMoving();
     }
 
     public void DisableDialogue()

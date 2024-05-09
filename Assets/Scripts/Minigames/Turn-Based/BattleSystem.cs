@@ -29,7 +29,7 @@ public class BattleSystem : MonoBehaviour
     public BattleState state;
 
     public Animator playerAnimator1;
-    //public Animator enemyAnimator1;
+    public Animator enemyAnimator1;
 
     void Start()
     {
@@ -75,6 +75,8 @@ public class BattleSystem : MonoBehaviour
     IEnumerator PlayerAttack()
     {
         playerAnimator1.SetBool("BasicAttack", true);
+        yield return new WaitForSeconds(2f);
+        playerAnimator1.SetBool("BasicAttack", false);
         //Damage the enemy + wait for a few seconds
         bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
 
@@ -120,11 +122,13 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator EnemyTurn()
     {
-
+        
         Cursor.lockState = CursorLockMode.Locked;
-
+        enemyAnimator1.SetBool("EnemyAttack1", true);
         dialogueText.text = enemyUnit.unitName + " attacks!";
-
+        yield return new WaitForSeconds(2f);
+        
+        enemyAnimator1.SetBool("EnemyAttack1", false);
         yield return new WaitForSeconds(1f);
 
         bool isDead = playerUnit.TakeDamage(enemyUnit.damage);

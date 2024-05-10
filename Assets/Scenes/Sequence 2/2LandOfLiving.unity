@@ -16159,6 +16159,14 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 112
       objectReference: {fileID: 0}
+    - target: {fileID: 8820078376969093331, guid: 298a1be0a5e4fae45a89c01637cea4fb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0214
+      objectReference: {fileID: 0}
+    - target: {fileID: 9095506492537966502, guid: 298a1be0a5e4fae45a89c01637cea4fb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 587572434722420873, guid: 298a1be0a5e4fae45a89c01637cea4fb, type: 3}
     m_RemovedGameObjects: []
@@ -24534,7 +24542,6 @@ MonoBehaviour:
   dialogueText: {fileID: 1279543222}
   animator_dialogue: {fileID: 1274419117}
   animator_cam: {fileID: 591825694}
-  playerAnimator: {fileID: 2022307431}
 --- !u!4 &1973258879
 Transform:
   m_ObjectHideFlags: 0
@@ -24945,11 +24952,6 @@ CanvasRenderer:
 --- !u!4 &2022307430 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1579331062398972758, guid: 1a7236f6ea94de949a121975f4e52128, type: 3}
-  m_PrefabInstance: {fileID: 7295393725619923299}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &2022307431 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 6015383778222844660, guid: 1a7236f6ea94de949a121975f4e52128, type: 3}
   m_PrefabInstance: {fileID: 7295393725619923299}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2036287800

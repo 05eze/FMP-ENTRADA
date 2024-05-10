@@ -14,6 +14,8 @@ public class DialogueManager : MonoBehaviour
     public Animator animator_dialogue;
     public Animator animator_cam;
 
+    public GameObject transition;
+
     private Queue<string> sentences;
 
     private void Start()
@@ -91,6 +93,8 @@ public class DialogueManager : MonoBehaviour
         animator_cam.SetBool("IsOpen", false);
 
         Cursor.lockState = CursorLockMode.Locked;
+
+        transition.SetActive(true);
     }
 
 

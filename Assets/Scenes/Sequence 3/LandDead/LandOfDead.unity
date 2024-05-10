@@ -234,6 +234,7 @@ MonoBehaviour:
   dialogueText: {fileID: 1896808488}
   animator_dialogue: {fileID: 566276206}
   animator_cam: {fileID: 1388088838}
+  transition: {fileID: 1995183159}
 --- !u!4 &21113094
 Transform:
   m_ObjectHideFlags: 0
@@ -1442,7 +1443,7 @@ GameObject:
   - component: {fileID: 297462630}
   - component: {fileID: 297462629}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: La Mano chat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1466,6 +1467,81 @@ MonoBehaviour:
     - 'VIDEL:
 
       Who was that?'
+    - 'LA MANO:
+
+      That, my friend, was Santa Muerte. Pretty much the Lady of
+      Death!
+
+'
+    - "VIDEL:\nYou say that like it\u2019s a good thing?!\r"
+    - 'VIDEL:
+
+      ...'
+    - 'VIDEL:
+
+      Wait, who are YOU?!
+
+'
+    - "LA MANO:\nThe name\u2019s La Mano, I\u2019d shake your hand but, you know\u2026\r"
+    - "VIDEL:\nAren\u2019t you dead?\r"
+    - 'LA MANO:
+
+      Of course I am genius, take a look at where we are!'
+    - "EL BORRACHO:\nMY NAME IS EL BORRACHO AND I\u2026\r"
+    - "EL BORRACHO:\n I\u2026 I don\u2019t really know why I\u2019m back\u2026 "
+    - 'EL BORRACHO:
+
+      ANOTHER BEER!'
+    - "LA MANO:\nSorry about him, he\u2019s just a little rattled."
+    - 'VIDEL:
+
+      What is going on?
+
+'
+    - "LA MANO:\nI don\u2019t really know but I\u2019m pretty sure we\u2019re gonna
+      want that gem if you ever want to get back to the Land of the Living.\r"
+    - "EL BORRACHO:\nWoah woah what\u2019s the rush? Our new friends only just got
+      here, Mano!\r\n"
+    - "LA MANO:\nWell, my friend, if you remember\u2026 WE ARE DEAD. \r\n"
+    - 'LA MANO:
+
+      And these poor people are clearly not meant to be here. '
+    - "LA MANO:\nIf that portal remains closed I\u2019m afraid they will join us
+      in being\u2026"
+    - 'VIDEL:
+
+      Being what?
+
+'
+    - "LA MANO:\nNot alive\u2026\r\n"
+    - 'VIDEL:
+
+      What?!'
+    - "EL BORRACHO:\nI\u2019M TOO YOUNG TO DIE!\r\nYou gotta help us out kid!\r\n"
+    - "LA MANO:\nNot you, Borracho\u2026\r\n"
+    - "EL BORRACHO:\nOh that\u2019s not so bad, nothing to be worried about compa."
+    - 'VIDEL:
+
+      Maybe not for you!
+
+'
+    - "EL BORRACHO:\nTrust me, doesn\u2019t hurt a bit!\r\n"
+    - "VIDEL:\nNot sure I believe you\u2026\r\n"
+    - 'LA MANO:
+
+      The point is, we have to stop Santa Muerte no matter what
+      before she takes over the Land of the Living with the power of the Entrada!
+
+'
+    - 'LA MANO:
+
+      So, what do ya say, kid?
+
+'
+    - 'VIDEL:
+
+      I''m in! Let''s go!'
+    - LA MANO JOINS THE FIGHT!
   PressE: {fileID: 835640010}
 --- !u!65 &297462630
 BoxCollider:
@@ -1792,6 +1868,7 @@ Transform:
   - {fileID: 1524389306}
   - {fileID: 1998613534}
   - {fileID: 297462631}
+  - {fileID: 1995183160}
   m_Father: {fileID: 200306693}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3217,7 +3294,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4289100595
-  m_fontColor: {r: 0.19958171, g: 0.48086512, b: 0.6509434, a: 1}
+  m_fontColor: {r: 0.7122642, g: 0.89241177, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3869,16 +3946,16 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 675775052}
+  - {fileID: 420912370}
   - {fileID: 707507759}
+  - {fileID: 423483938}
+  - {fileID: 675775052}
   - {fileID: 170276402}
   - {fileID: 566276205}
   - {fileID: 835640013}
   - {fileID: 843009642}
-  - {fileID: 423483938}
-  - {fileID: 179707655}
-  - {fileID: 420912370}
   - {fileID: 946079268}
+  - {fileID: 179707655}
   m_Father: {fileID: 200306693}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6229,7 +6306,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0.00016017443, w: 0}
+  m_margin: {x: 0, y: 0, z: -274.272, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -6994,7 +7071,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1375896171
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10845,6 +10922,73 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.06384889, y: 0.053725302, z: 0.04315172}
   m_Center: {x: -0.000000057742007, y: -0.0000026058406, z: 0.000003261492}
+--- !u!1 &1995183159
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1995183160}
+  - component: {fileID: 1995183162}
+  - component: {fileID: 1995183161}
+  m_Layer: 0
+  m_Name: 'Dialogue Transition '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1995183160
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995183159}
+  m_LocalRotation: {x: -0, y: -0.2588186, z: -0, w: 0.965926}
+  m_LocalPosition: {x: -46.08, y: 1.4599991, z: 77.07}
+  m_LocalScale: {x: 10.020223, y: 3.1712637, z: 14.543052}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 368131303}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: -30, z: 0}
+--- !u!114 &1995183161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995183159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a895a7e1dadcce649a2765060a6855f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transition: {fileID: 423483937}
+--- !u!65 &1995183162
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995183159}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1998613533
 GameObject:
   m_ObjectHideFlags: 0
@@ -10913,6 +11057,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CutsceneCamera: {fileID: 598790604}
   PlayerCamera: {fileID: 1388088837}
+  FadeTransition: {fileID: 946079267}
+  laManoSpeech: {fileID: 1375896170}
+  santaMuerteSpeech: {fileID: 737945418}
 --- !u!1 &2007688738
 GameObject:
   m_ObjectHideFlags: 0

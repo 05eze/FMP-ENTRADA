@@ -6,7 +6,6 @@ using UnityEngine.EventSystems;
 public class AutoDialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
-    public PlayerMovement playerMovement;
 
     private void Start()
     {

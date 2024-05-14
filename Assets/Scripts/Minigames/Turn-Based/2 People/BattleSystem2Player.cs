@@ -55,7 +55,7 @@ public class BattleSystem2Player : MonoBehaviour
         playerUnit = playerGO.GetComponent<Unit>();
 
         GameObject player2GO = Instantiate(playerPrefab2, playerBattleStation2);
-        playerUnit = player2GO.GetComponent<Unit>();
+        playerUnit2 = player2GO.GetComponent<Unit>();
 
         GameObject enemyGO = Instantiate(enemyPrefab, enemyBattleStation);
         enemyUnit = enemyGO.GetComponent<Unit>();
@@ -103,12 +103,13 @@ public class BattleSystem2Player : MonoBehaviour
         {
             //pLAYER2 turn, change state to PLAYERTURN2
             state = BattleState2.PLAYERTURN2;
-            StartCoroutine(PlayerTurn2());
+            StartCoroutine(PlayerAttack2());
+            PlayerTurn2();
         }
         //Change state based on what happened 
     }
 
-    IEnumerator PlayerTurn2()
+    IEnumerator PlayerAttack2()
     {
         playerAnimator2.SetBool("GuitarAttack", true);
         yield return new WaitForSeconds(2f);
@@ -193,13 +194,28 @@ public class BattleSystem2Player : MonoBehaviour
 
     void PlayerTurn()
     {
-        dialogueText.text = "Choose an action:";
-    }
+        dialogueText.text = "VIDEL! Choose an action:";
+    }   
+    
+    void PlayerTurn2()
+    {
+        dialogueText.text = "LA MANO! Choose an action:";
+    }   
 
     public void OnAttackButton()
     {
         //Check if it is the PLAYER's turn
         if (state != BattleState2.PLAYERTURN)
+            return;
+
+        StartCoroutine(PlayerAttack());
+
+    }
+    
+    public void OnAttackButton2()
+    {
+        //Check if it is the PLAYER's turn
+        if (state != BattleState2.PLAYERTURN2)
             return;
 
         StartCoroutine(PlayerAttack());

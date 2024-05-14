@@ -16,6 +16,15 @@ public class BattleHUD : MonoBehaviour
         nameText.text = unit.unitName;
         hpSlider.maxValue = unit.maxHP;
         hpSlider.value = unit.currentHP;
+
+
+        if (unit == null)
+        {
+            Debug.LogError("Unit is null. Cannot set HUD.");
+            return;
+        }
+
+        
     }
 
     public void SetHP(int hp)

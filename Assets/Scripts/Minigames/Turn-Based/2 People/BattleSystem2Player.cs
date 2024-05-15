@@ -79,6 +79,7 @@ public class BattleSystem2Player : MonoBehaviour
 
     IEnumerator PlayerAttack()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         playerAnimator1.SetBool("BasicAttack", true);
         yield return new WaitForSeconds(2f);
         playerAnimator1.SetBool("BasicAttack", false);
@@ -87,7 +88,7 @@ public class BattleSystem2Player : MonoBehaviour
 
         enemyHUD.SetHP(enemyUnit.currentHP);
         dialogueText.text = "The attack is successful!";
-        Cursor.lockState = CursorLockMode.Locked;
+        
 
         yield return new WaitForSeconds(2f);
         Cursor.lockState = CursorLockMode.None;
@@ -110,16 +111,20 @@ public class BattleSystem2Player : MonoBehaviour
     }
 
     IEnumerator PlayerAttack2()
-    {
+    {  
+        Cursor.lockState = CursorLockMode.Locked;
         playerAnimator2.SetBool("GuitarAttack", true);
         yield return new WaitForSeconds(2f);
         playerAnimator2.SetBool("GuitarAttack", false);
         //Damage the enemy + wait for a few seconds
-        bool isDead = enemyUnit.TakeDamage(playerUnit.damage);          
+        bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
+       
+        playerUnit.Heal(5);
+        playerUnit2.Heal(5);
 
         enemyHUD.SetHP(enemyUnit.currentHP);                            
         dialogueText.text = "The attack is successful!";
-        Cursor.lockState = CursorLockMode.Locked;
+      
 
         yield return new WaitForSeconds(2f);
         Cursor.lockState = CursorLockMode.None;
@@ -227,6 +232,7 @@ public class BattleSystem2Player : MonoBehaviour
        
         Cursor.lockState = CursorLockMode.Locked;
         playerUnit.Heal(5);
+        playerUnit2.Heal(5);
         playerAnimator2.SetBool("GuitarAttack", true);
 
         playerHUD.SetHP(playerUnit.currentHP);

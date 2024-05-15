@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.294542, g: 0.3982527, b: 0.58894163, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5211,6 +5211,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 897391170}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &620954132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8055,7 +8067,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &897391171
 Transform:
   m_ObjectHideFlags: 0
@@ -8064,7 +8076,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 897391170}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -53.4, y: 1.5604, z: -40.74}
+  m_LocalPosition: {x: -53.4, y: 1.5604, z: -45.08}
   m_LocalScale: {x: 14.645037, y: 4.6868, z: 3.7280269}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8083,7 +8095,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 147968990eb72ac41a4b9a44eeb3da7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ToDelete: {fileID: 0}
+  ToDelete: {fileID: 897391170}
   ToDelete2: {fileID: 0}
   ToDelete3: {fileID: 0}
 --- !u!114 &897391173

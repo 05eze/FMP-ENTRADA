@@ -31,4 +31,7 @@ public class ActivityTrigger : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
     }
+
+
+    
 }

@@ -50,20 +50,9 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("Speed", moveDirection.magnitude);
 
 
-        if (Input.GetKey("w"))
-        {
-           
-            transform.rotation = Quaternion.Euler(0, 0, 0);
-        }
-
 
    
 
-
-        if (!Input.GetKey("w"))
-        {
-         
-        }
 
       
     }

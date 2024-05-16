@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.294542, g: 0.3982527, b: 0.58894163, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -26725,5 +26725,43 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2207108614562753004, guid: 1a7236f6ea94de949a121975f4e52128, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7295393725619923302}
+    - targetCorrespondingSourceObject: {fileID: 2207108614562753004, guid: 1a7236f6ea94de949a121975f4e52128, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7295393725619923301}
   m_SourcePrefab: {fileID: 100100000, guid: 1a7236f6ea94de949a121975f4e52128, type: 3}
+--- !u!1 &7295393725619923300 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2207108614562753004, guid: 1a7236f6ea94de949a121975f4e52128, type: 3}
+  m_PrefabInstance: {fileID: 7295393725619923299}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7295393725619923301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7295393725619923300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 392a6362a0875e247b485b0b39d6f540, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0
+  rotateSpeed: 10
+  cameraM: {fileID: 591825689}
+--- !u!114 &7295393725619923302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7295393725619923300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b67daa4ae0d160c4b8fa1142bd459f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

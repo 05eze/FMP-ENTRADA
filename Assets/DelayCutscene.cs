@@ -28,11 +28,13 @@ public class DelayCutscene : MonoBehaviour
     {
 
         FindAnyObjectByType<PlayerMovement>().enabled = false;
+        FindAnyObjectByType<TopDownController>().enabled = false;
         Debug.Log("Countdown begins");
         yield return new WaitForSeconds(14);
         CutsceneCamera.SetActive(false);
         PlayerCamera.SetActive(true);
         FindAnyObjectByType<PlayerMovement>().enabled = true;
+        FindAnyObjectByType<TopDownController>().enabled = true;
     }
 
     IEnumerator RemoveFade()

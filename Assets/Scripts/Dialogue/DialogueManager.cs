@@ -28,6 +28,8 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue (Dialogue dialogue)
     {
         FindAnyObjectByType<PlayerMovement>().enabled = false;
+        FindAnyObjectByType<TopDownController>().enabled = false;
+
 
 
         //FindAnyObjectByType<DialogueTrigger>().PressE.SetActive(false); && 
@@ -85,6 +87,7 @@ public class DialogueManager : MonoBehaviour
     public void EndDialogue()
     {
         FindAnyObjectByType<PlayerMovement>().enabled = true;
+        FindAnyObjectByType<TopDownController>().enabled = true;
 
         //FindAnyObjectByType<DialogueTrigger>().PressE.SetActive(true);
         Debug.Log("End of conversation.");

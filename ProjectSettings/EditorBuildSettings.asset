@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Sequence 3/LandDead/Minigame/MusicaMinigame.unity
     guid: 1ec93bef51cc5804eae02894f1074067
+  - enabled: 1
+    path: Assets/Scenes/Sequence 3/LandDead/END.unity
+    guid: c6fb39099029c16439bd12126f3e11e0
   m_configObjects: {}

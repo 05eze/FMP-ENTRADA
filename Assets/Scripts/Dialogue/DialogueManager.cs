@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using Text = TMPro.TextMeshProUGUI;
 using UnityEngine.UI;
-using UnityEditor.Presets;
 
 public class DialogueManager : MonoBehaviour
 {
